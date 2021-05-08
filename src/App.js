@@ -3,18 +3,17 @@ import React, { useEffect, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
 
-
 // import Header from './components/Header'
 // import Footer from './components/Footer'
-// import SatelliteApp from './components/SatelliteImg';
+import SatelliteApp from "./components/SatelliteImg";
 import WeatherImg from "./components/WeatherImg";
 
 function App() {
   const [data, setData] = useState();
-  
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      setData(position)
+      setData(position);
     });
   }, []);
 
@@ -24,11 +23,11 @@ function App() {
   //   });
   // }
 
-
   return (
     <div className='App'>
       {/* <Header /> */}
-      {(data) ? <WeatherImg position={data} /> : <></>}
+      {data ? <WeatherImg position={data} /> : <></>}
+      {data ? <SatelliteApp position={data} /> : <></>}
       {/* <Footer /> */}
     </div>
   );
