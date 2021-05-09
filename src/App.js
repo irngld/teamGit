@@ -2,11 +2,15 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
+//NOTE: react toggle component
+//https://github.com/trendmicro-frontend/react-toggle-switch
+import "@trendmicro/react-toggle-switch/dist/react-toggle-switch.css";
 
-// import Header from './components/Header'
+// import Header from "./components/Header";
 // import Footer from './components/Footer'
 import SatelliteApp from "./components/SatelliteImg";
 import WeatherImg from "./components/WeatherImg";
+import RestaurantInfo from "./components/RestaurantInfo";
 
 function App() {
   const [data, setData] = useState();
@@ -28,6 +32,7 @@ function App() {
       {/* <Header /> */}
       {data ? <WeatherImg position={data} /> : <></>}
       {data ? <SatelliteApp position={data} /> : <></>}
+      {data ? <RestaurantInfo position={data} /> : <></>}
       {/* <Footer /> */}
     </div>
   );
