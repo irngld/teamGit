@@ -16,13 +16,6 @@
   /* padding: 5px; */
 }
 
-/* .App {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-} */
-
 .card {
   padding: 1rem;
   margin: 1rem;
@@ -59,13 +52,6 @@
 
 .header {
   color: #dddddd;
-}
-
-.icon {
-  /* align-self: flex-end; */
-  /* margin-right: -5.5rem;
-  margin-top: -2rem;
-  z-index: 999; */
 }
 
 .icon img {

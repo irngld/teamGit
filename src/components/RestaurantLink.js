@@ -1,7 +1,5 @@
 import React from "react";
 
-import restaurantIcon from "../img/restaurant-icon.jpg";
-
 import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 
 const RestaurantLink = (props) => {
