@@ -27,13 +27,29 @@ function App() {
   //   });
   // }
 
+  // return (
+  //   <div className='App'>
+  //     {/* <Header /> */}
+  //     <div className='d-flex flex-row w-100 justify-content-center '>
+  //       {data ? <WeatherImg position={data} /> : <></>}
+  //       {data ? <SatelliteApp position={data} /> : <></>}
+  //     </div>
+  //     <div className='w-25'>
+  //       {data ? <RestaurantInfo position={data} /> : <></>}
+  //     </div>
+  //   </div>
+  // );
+
   return (
     <div className='App'>
       {/* <Header /> */}
-      {data ? <WeatherImg position={data} /> : <></>}
-      {data ? <SatelliteApp position={data} /> : <></>}
-      {data ? <RestaurantInfo position={data} /> : <></>}
-      {/* <Footer /> */}
+      <div className='d-flex flex-row w-100 justify-content-center '>
+        {data ? <WeatherImg position={data} /> : <></>}
+        {data ? <SatelliteApp position={data} /> : <></>}
+      </div>
+      <div className=''>
+        {data ? <RestaurantInfo position={data} /> : <></>}
+      </div>
     </div>
   );
 }

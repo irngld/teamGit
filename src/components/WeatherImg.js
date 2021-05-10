@@ -49,12 +49,18 @@ const WeatherLocation = (props) => {
           <div className='value'>{data?.weather[0].description}</div>
         </div>
         <div className='row justify-content-center'>
+          <span className='col'>
+            <sup>&deg;</sup>C
+          </span>
           <ToggleSwitch
             checked={showEnglishUnits}
             onChange={(event) => {
               setShowEnglishUnits(!showEnglishUnits);
             }}
           />
+          <span className='col'>
+            <sup>&deg;</sup>F
+          </span>
         </div>
       </div>
     </>
