@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 //https://github.com/trendmicro-frontend/react-toggle-switch
 import "@trendmicro/react-toggle-switch/dist/react-toggle-switch.css";
 
-// import Header from "./components/Header";
+import Header from "./components/Header";
 // import Footer from './components/Footer'
 import SatelliteApp from "./components/SatelliteImg";
 import WeatherImg from "./components/WeatherImg";
@@ -42,8 +42,8 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <Header /> */}
-      <div className='d-flex flex-row w-100 justify-content-center '>
+      <Header className='' />
+      <div className='d-flex flex-row w-100 justify-content-center mt-5 mb-5 '>
         {data ? <WeatherImg position={data} /> : <></>}
         {data ? <SatelliteApp position={data} /> : <></>}
       </div>

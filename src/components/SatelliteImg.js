@@ -13,6 +13,7 @@ const SatelliteApp = (props) => {
 
   return (
     <div className='card'>
+      <h4>Satellite Image</h4>
       <div className='mainDiv'>
         <img src={url} style={{ height: "300px" }} />
       </div>

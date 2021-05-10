@@ -8,10 +8,13 @@ const RestaurantLink = (props) => {
   const { restaurant } = props;
   // restaurant.photos_url
   return (
-    <Card className='' style={{ height: "450px", width: "300px" }}>
+    <Card
+      className='d-flex justify-content-center'
+      style={{ height: "450px", width: "300px" }}
+    >
       <div className='d-flex justify-content-center'>
         <Image
-          src={restaurantIcon}
+          src={restaurant.image_url}
           className='card-img-top'
           alt='restaurant photo'
           fluid
@@ -21,8 +24,8 @@ const RestaurantLink = (props) => {
       <Card.Body>
         <Card.Title>{restaurant.name}</Card.Title>
         <Card.Text>
-          <p>{restaurant.cuisines}</p>
-          <p>{restaurant.location.locality}</p>
+          <p>{restaurant.categories[0].title}</p>
+          <p>{restaurant.location.city}</p>
         </Card.Text>
       </Card.Body>
       <Card.Footer className='bg-dark'>
@@ -31,7 +34,7 @@ const RestaurantLink = (props) => {
           className='text-white text-decoration-none'
           target='_blank'
         >
-          Visit Restaurant Site
+          Visit {restaurant.name} Site
         </Card.Link>
       </Card.Footer>
     </Card>
