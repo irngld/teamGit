@@ -12,7 +12,8 @@ const SatelliteApp = (props) => {
   const url = `${baseURL}?lon=${position.coords.longitude}&lat=${position.coords.latitude}&date=2020-08-01&dim=0.1&api_key=${key}`;
 
   return (
-    <div className='main'>
+    <div className='card'>
+      <h4>Satellite Image</h4>
       <div className='mainDiv'>
         <img src={url} style={{ height: "300px" }} />
       </div>
