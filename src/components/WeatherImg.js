@@ -4,7 +4,7 @@ import ToggleSwitch from "@trendmicro/react-toggle-switch";
 
 const WeatherLocation = (props) => {
   const [data, setData] = useState();
-  const [showEnglishUnits, setShowEnglishUnits] = useState(true);
+  const [showEnglishUnits, setShowEnglishUnits] = useState(true); // true starts temp at farenheit
   const { position } = props;
 
   let baseURL = "https://api.openweathermap.org/data/2.5/weather";
@@ -32,7 +32,7 @@ const WeatherLocation = (props) => {
           <img
             className='img-fluid'
             src={`http://openweathermap.org/img/wn/${data?.weather[0].icon}@2x.png`}
-          />
+          />  {/* Is data null ?   THEN wait */}
         </span>
         <div className='title'>
           <p>{data?.name}</p>

@@ -21,7 +21,7 @@ function App() {
       setData(position);
     });
 
-    const response = await fetch("https://geolocation-db.com/json/");
+    const response = await fetch("https://geolocation-db.com/json/");  // Header location
     const json = await response.json();
 
     setLocation(json);
@@ -35,7 +35,7 @@ function App() {
     <div className='App'>
       <Header location={location} />
       <div className='d-flex flex-row w-100 justify-content-center mt-5 mb-5 '>
-        {data ? <WeatherImg position={data} /> : <></>}
+        {data ? <WeatherImg position={data} /> : <></>}  {/* Ternary operator to prevent page errors */}
         {data ? <SatelliteApp position={data} /> : <></>}
       </div>
       <div className=''>
