@@ -4,15 +4,15 @@ import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 
 const RestaurantInfo = (props) => {
   const [data, setData] = useState();
-  const [showEnglishUnits, setShowEnglishUnits] = useState(true);
+  // const [showEnglishUnits, setShowEnglishUnits] = useState(true);
   const { position } = props;
 
   let baseURL =
-    "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
+    "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search"; // circumvents CORS issues
 
   let url = `${baseURL}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&term=restaurants`; //
 
-  console.log("2. URL", url);
+  // console.log("2. URL", url);
 
   const initData = async () => {
     const response = await fetch(url, {
@@ -21,7 +21,7 @@ const RestaurantInfo = (props) => {
       },
     });
     const data = await response.json();
-    console.log("3. json", data);
+    // console.log("3. json", data);
 
     setData(data);
   };

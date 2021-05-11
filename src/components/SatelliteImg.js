@@ -6,9 +6,8 @@ const key = process.env.REACT_APP_NASA_KEY;
 
 const SatelliteApp = (props) => {
   const { position } = props;
-  const { search, setSearch } = useState("");
-  const [results, setResults] = useState([]);
-  let today = new Date(Date.now()).toLocaleDateString();
+  
+  // Hardcoded date for clear skies
   const url = `${baseURL}?lon=${position.coords.longitude}&lat=${position.coords.latitude}&date=2020-08-01&dim=0.1&api_key=${key}`;
 
   return (
